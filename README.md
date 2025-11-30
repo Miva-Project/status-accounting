@@ -12,7 +12,7 @@ This project provides a basic inventory management system that:
 ## Project Structure
 
 ```
-lab_3_assessment/
+status-accounting/
 ├── inventory.py          # Inventory data (list of items)
 ├── app.py                # Main application script
 ├── utils/
@@ -34,13 +34,14 @@ Main script that:
 - Reads inventory data from `inventory.py`
 - Calculates the total stock value (sum of quantity × price for all items)
 - Displays item-wise calculations and the total value
+- Contains functions for calculating item values, formatting output, and displaying inventory reports
 
 ### `utils/helpers.py`
-Optional helper functions:
-- `highest_stock_item()`: Returns the item with the highest quantity
-- `lowest_stock_item()`: Returns the item with the lowest quantity
-- `get_item_by_name(item_name)`: Finds an item by name
-- `get_total_items()`: Returns the total number of different items
+Helper functions for inventory analysis:
+- `highest_stock_item()`: Returns the item with the highest quantity (or None if inventory is empty)
+- `lowest_stock_item()`: Returns the item with the lowest quantity (or None if inventory is empty)
+- `get_item_by_name(item_name)`: Finds an item by name (case-insensitive, returns None if not found)
+- `get_total_items()`: Returns the total number of different items in inventory
 
 ### `requirements.txt`
 Python dependencies (currently none required for basic functionality)
@@ -50,7 +51,7 @@ Python dependencies (currently none required for basic functionality)
 1. Clone or download this repository
 2. Navigate to the project directory:
    ```bash
-   cd lab_3_assessment
+   cd status-accounting
    ```
 
 3. (Optional) Create a virtual environment:
